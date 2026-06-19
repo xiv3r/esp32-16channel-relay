@@ -1,11 +1,10 @@
 # Requirements
 - ESP32 30/38P
 - DUPONT WIRES
-- 16 CHANNEL RELAY (2 x 8 channel)
+- 5V 16 CHANNEL RELAY (2 x 8 channel)
 
 # Installations
-> Download the firmware and flash to `0x0`
-> ### [Firmware](https://github.com/xiv3r/esp32-16channel-relay/raw/refs/heads/main/esp32-16ch-firmware-dump-0x0.bin)
+> Download the firmware in the release and flash to flash offset `0x0`
 
 # Wifi Key
 - SSID: `ESP32_16CH_Relay_Controller`
@@ -13,6 +12,8 @@
 
 # 16 Channel GPIO Connections
 ```
+ESP32            16 CHANNEL RELAY
+
 GPIO 15 -------> IN1  Relay1
 GPIO 2  -------> IN2  Relay2
 GPIO 4  -------> IN3  Relay3
@@ -32,6 +33,9 @@ GPIO 32 -------> IN16 Relay16
 ```
 
 # Screenshot
+
 <img src="https://github.com/xiv3r/esp32-16channel-relay/blob/main/.github/workflows/image2.jpg">
+
+<br>
 
 <img src="https://github.com/xiv3r/esp32-16channel-relay/blob/main/.github/workflows/image.jpg">
