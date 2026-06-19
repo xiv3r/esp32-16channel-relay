@@ -1,4 +1,4 @@
-name: Build ESP32 Firmware
+name: Build ESP32 16CH Firmware
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
         arduino-cli core install esp32:esp32
 
         # Compile firmware
-        mv esp32-sketch.ino esp32-16channel-relay.ino
+        mv esp32-16ch-sketch.ino esp32-16channel-relay.ino
         arduino-cli compile --fqbn esp32:esp32:esp32 --clean --output-dir firmware .
          
     - name: Determine release tag
@@ -39,7 +39,7 @@ jobs:
         if [ "${{ github.event_name }}" == "release" ]; then
           TAG_NAME="${{ github.event.release.tag_name }}"
         else
-          TAG_NAME="esp32"
+          TAG_NAME="esp32-16channel"
         fi
         echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
 
