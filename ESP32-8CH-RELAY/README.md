@@ -4,7 +4,7 @@
 - 8 CHANNEL RELAY
 
 # Installations
-- Download the firmware and flash using flash offset `0x0`
+- Download the firmware in the release and flash using the flash offset `0x0`
 
 # Wifi Key
 - SSID: `ESP32_8CH_Relay_Controller`
@@ -12,6 +12,8 @@
 
 # 8 Channel GPIO Connections 
 ```
+ESP32             8 CHANNEL RELAY
+
 GPIO 15  -------> IN1  Relay1
 GPIO 2   -------> IN2  Relay2
 GPIO 4   -------> IN3  Relay3
