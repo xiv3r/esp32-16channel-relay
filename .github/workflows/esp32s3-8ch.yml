@@ -32,7 +32,7 @@ jobs:
         # Compile firmware
         cd ESP32-S3-8CH-RELAY
         mv esp32s3-8ch-sketch.ino ESP32-S3-8CH-RELAY.ino
-        arduino-cli compile --fqbn esp32:esp32:esp32 --clean --output-dir firmware .
+        arduino-cli compile --fqbn esp32:esp32:esp32s3:FlashSize=16M --clean --output-dir firmware .
          
     - name: Determine release tag
       id: get_tag
