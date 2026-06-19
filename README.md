@@ -7,6 +7,10 @@
 > Download the firmware and flash to `0x0`
 > ### [Firmware](https://github.com/xiv3r/esp32-16channel-relay/raw/refs/heads/main/esp32-16ch-firmware-dump-0x0.bin)
 
+# Wifi Key
+- SSID: `ESP32_Relay_Controller
+- PASS: `12345678`
+
 # 16 Channel GPIO Connections
 ```
 GPIO 15 -------> IN1  Relay1
