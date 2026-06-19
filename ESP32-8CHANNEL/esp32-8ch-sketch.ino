@@ -4,7 +4,7 @@
 #include <Preferences.h>
 #include <esp_wifi.h>
 
-const char* defaultSSID = "ESP32_Relay_Controller";
+const char* defaultSSID = "ESP32_8CH_Relay_Controller";
 const char* defaultPassword = "12345678";
 
 const int relayPins[8] = {15, 2, 4, 5, 18, 19, 3, 1}; 
