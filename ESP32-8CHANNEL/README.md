@@ -3,6 +3,13 @@
 - DUPONT WIRE
 - 8 CHANNEL RELAY
 
+# Installations
+- Download the firmware and flash using flash offset `0x0`
+
+# Wifi Key
+- SSID: `ESP32_8CH_Relay_Controller`
+- PASS: `12345678`
+
 # 8 Channel GPIO Connections 
 ```
 GPIO 15  -------> IN1  Relay1
