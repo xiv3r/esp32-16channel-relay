@@ -28,4 +28,6 @@ GPIO 32 -------> IN16 Relay16
 ```
 
 # Screenshot
+<img src="https://github.com/xiv3r/esp32-16channel-relay/blob/main/.github/workflows/image2.jpg">
+
 <img src="https://github.com/xiv3r/esp32-16channel-relay/blob/main/.github/workflows/image.jpg">
