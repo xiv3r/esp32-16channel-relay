@@ -2,6 +2,7 @@
 - ESP32 30/38P
 - DUPONT WIRES
 - 5V 16 CHANNEL RELAY (2 x 8 channel)
+- ESP32 Expansion Board
 
 # Installations
 > Download the firmware in the release and flash to flash offset `0x0`
