@@ -6,6 +6,8 @@
 # Installations
 > Download the firmware in the release and flash to `0x0`
 
+https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp8266-11channel
+
 # Wifi Key
 - SSID: `ESP8266_10CH_Relay_Controller`
 - PASS: `12345678`
