@@ -1,7 +1,7 @@
 # Requirements
 - ESP8266 NodeMCU V1.0
 - 13 F-F DUPONT WIRES
-- 5v 11 CHANNEL RELAY
+- 5v 10 CHANNEL RELAY
 
 # Installations
 > Download the firmware in the release and flash to `0x0`
@@ -12,7 +12,7 @@ https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp8266-10channel
 - SSID: `ESP8266_10CH_Relay_Controller`
 - PASS: `12345678`
 
-# 11 Channel GPIO Connections
+# 10 Channel GPIO Connections
 ```
 ESP8266      10 CHANNEL RELAY
 
