@@ -1,10 +1,12 @@
 # Requirements
-- ESP32 30/38P
+- ESP32S3 N16R8
 - DUPONT WIRES
 - 5v 8 CHANNEL RELAY
 
 # Installations
 > Download the firmware in the release and flash to `0x0`
+
+https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp32s3-8channel
 
 # Wifi Key
 - SSID: `ESP32s3_8CH_Relay_Controller`
