@@ -4,7 +4,9 @@
 - 8 CHANNEL RELAY
 
 # Installations
-- Download the firmware in the release and flash using the flash offset `0x0`
+> Download the firmware in the release and flash using the flash offset `0x0`
+
+https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp32-8channel
 
 # Wifi Key
 - SSID: `ESP32_8CH_Relay_Controller`
