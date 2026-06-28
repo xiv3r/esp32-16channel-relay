@@ -14,7 +14,7 @@ https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp8266-11channel
 
 # 11 Channel GPIO Connections
 ```
-ESP8266        11 CHANNEL RELAY
+ESP8266      10 CHANNEL RELAY
 
 D0  -------> IN1   Relay1
 D1  -------> IN2   Relay2
