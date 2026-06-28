@@ -7,22 +7,21 @@
 > Download the firmware in the release and flash to `0x0`
 
 # Wifi Key
-- SSID: `ESP8266_11CH_Relay_Controller`
+- SSID: `ESP8266_10CH_Relay_Controller`
 - PASS: `12345678`
 
-# 16 Channel GPIO Connections
+# 11 Channel GPIO Connections
 ```
 ESP8266        11 CHANNEL RELAY
 
-GPIO 16  -------> IN1   Relay1
-GPIO 5   -------> IN2   Relay2
-GPIO 4   -------> IN3   Relay3
-GPIO 0   -------> IN4   Relay4
-GPIO 2   -------> IN5   Relay5
-GPIO 14  -------> IN6   Relay6
-GPIO 12  -------> IN7   Relay7
-GPIO 13  -------> IN8   Relay8
-GPIO 15  -------> IN9   Relay9
-GPIO 3   -------> IN10  Relay10
-GPIO 1   -------> IN11  Relay11
+D0  -------> IN1   Relay1
+D1  -------> IN2   Relay2
+D2  -------> IN3   Relay3
+D3  -------> IN4   Relay4
+D4  -------> IN5   Relay5
+D5  -------> IN6   Relay6
+D6  -------> IN7   Relay7
+D7  -------> IN8   Relay8
+RX  -------> IN9   Relay9
+TX  -------> IN10  Relay10
 ```
