@@ -1,4 +1,4 @@
-name: Build ESP8266 11CH Firmware
+name: Build ESP8266 10CH Firmware
 
 on:
   workflow_dispatch:
@@ -30,8 +30,8 @@ jobs:
         arduino-cli core install esp8266:esp8266
 
         # Compile firmware
-        cd ESP8266-11CH-RELAY
-        mv esp8266-11ch-sketch.ino ESP8266-11CH-RELAY.ino
+        cd ESP8266-10CH-RELAY
+        mv esp8266-10ch-sketch.ino ESP8266-10CH-RELAY.ino
         arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 --clean --output-dir firmware .
          
     - name: Determine release tag
@@ -40,7 +40,7 @@ jobs:
         if [ "${{ github.event_name }}" == "release" ]; then
           TAG_NAME="${{ github.event.release.tag_name }}"
         else
-          TAG_NAME="esp8266-11channel"
+          TAG_NAME="esp8266-10channel"
         fi
         echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
 
@@ -88,6 +88,6 @@ jobs:
       with:
         tag_name: ${{ steps.get_tag.outputs.tag_name }}
         files: |
-          ESP8266-11CH-RELAY/firmware/*.bin
+          ESP8266-10CH-RELAY/firmware/*.bin
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
