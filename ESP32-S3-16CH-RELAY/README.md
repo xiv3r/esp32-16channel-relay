@@ -1,5 +1,5 @@
 # Requirements
-- ESP32S3
+- ESP32S3 N16R8
 - DUPONT WIRES
 - 5v 16 CHANNEL RELAY (2 x 8 channel)
 
