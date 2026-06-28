@@ -7,6 +7,8 @@
 # Installations
 > Download the firmware in the release and flash to flash offset `0x0`
 
+https://github.com/xiv3r/esp32-16channel-relay/releases/tag/esp32-16channel
+
 # Wifi Key
 - SSID: `ESP32_16CH_Relay_Controller`
 - PASS: `12345678`
