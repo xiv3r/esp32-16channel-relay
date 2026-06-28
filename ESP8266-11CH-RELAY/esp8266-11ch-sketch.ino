@@ -3,24 +3,24 @@
 #include <DNSServer.h>
 #include <EEPROM.h>
 
-const char* defaultSSID = "ESP8266_11CH_Relay_Controller";
+const char* defaultSSID = "ESP8266_10CH_Relay_Controller";
 const char* defaultPassword = "12345678";
 
-const int relayPins[11] = {16, 5, 4, 0, 2, 14, 12, 13, 15, 3, 1};
+const int relayPins[10] = {16, 5, 4, 0, 2, 14, 12, 13, 3, 1};
 
 ESP8266WebServer server(80);
 DNSServer dnsServer;
 
-bool relayState[11] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-String relayNames[11];
+bool relayState[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+String relayNames[10];
 String apSSID;
 String apPassword;
 
 const int EEPROM_SIZE = 512;
 const int STATE_START = 0;
-const int NAME_START = 11;
-const int AP_NAME_START = 231;
-const int AP_PASS_START = 263;
+const int NAME_START = 10;
+const int AP_NAME_START = 210;
+const int AP_PASS_START = 242;
 
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
@@ -149,7 +149,7 @@ String getHTML() {
   String html = FPSTR(index_html);
   String buttonHTML = "";
   
-  for (int i = 0; i < 11; i++) {
+  for (int i = 0; i < 10; i++) {
     String btnClass = relayState[i] ? "btn btn-on" : "btn btn-off";
     String label = relayState[i] ? "ON" : "OFF";
     String name = relayNames[i];
@@ -176,7 +176,7 @@ void handleRoot() {
 void handleToggle() {
   if (server.hasArg("relay")) {
     int relayIndex = server.arg("relay").toInt();
-    if (relayIndex >= 0 && relayIndex < 11) {
+    if (relayIndex >= 0 && relayIndex < 10) {
       relayState[relayIndex] = !relayState[relayIndex];
       digitalWrite(relayPins[relayIndex], relayState[relayIndex] ? LOW : HIGH);
       EEPROM.write(STATE_START + relayIndex, relayState[relayIndex] ? 1 : 0);
@@ -194,7 +194,7 @@ void handleRename() {
     int relayIndex = server.arg("relay").toInt();
     String newName = server.arg("name");
     newName.trim();
-    if (relayIndex >= 0 && relayIndex < 11 && newName.length() > 0) {
+    if (relayIndex >= 0 && relayIndex < 10 && newName.length() > 0) {
       relayNames[relayIndex] = newName;
       saveStringToEEPROM(NAME_START + (relayIndex * 20), newName, 20);
       server.send(200, "text/plain", "OK");
@@ -232,7 +232,7 @@ void setup() {
   EEPROM.begin(EEPROM_SIZE);
   delay(10);
   
-  for (int i = 0; i < 11; i++) {
+  for (int i = 0; i < 10; i++) {
     pinMode(relayPins[i], OUTPUT);
     int savedState = EEPROM.read(STATE_START + i);
     relayState[i] = (savedState == 1) ? true : false;
