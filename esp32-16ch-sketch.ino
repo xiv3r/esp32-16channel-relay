@@ -7,7 +7,7 @@
 const char* defaultSSID = "ESP32_16CH_Relay_Controller";
 const char* defaultPassword = "12345678";
 
-const int relayPins[16] = {15, 2, 4, 5, 18, 19, 3, 1, 23, 13, 14, 27, 26, 25, 33, 32};
+const int relayPins[16] = {32, 33, 25, 26, 27, 14, 13, 23, 1, 3, 19, 18, 5, 4, 2, 15};
 
 WebServer server(80);
 DNSServer dnsServer;
